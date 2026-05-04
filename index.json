@@ -1,14 +1,9 @@
-"search": {
-  "endpoints": ["/search/data"],
-  "queryParam": "text",
-  "pageParam": "offset",
-  "mangaRegex": "<a[^>]+href=\"https://weebcentral\\.com/series/([^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\""
-},
-"details": {
-  "paths": ["/series/"],
-  "titleRegex": "<h1[^>]*>\\s*(.*?)\\s*</h1>",
-  "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
-  "descriptionRegex": "id=\"section-description\"[^>]*>\\s*<p[^>]*>\\s*(.*?)\\s*</p>",
-  "authorRegex": "Author.*?<a[^>]*>([^<]+)</a>",
-  "statusRegex": "Status.*?<a[^>]*>([^<]+)</a>"
-}
+[
+  {
+    "id": "weebcentral",
+    "name": "Weeb Central",
+    "lang": "English",
+    "version": "1.0.1",
+    "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png"
+  }
+]
