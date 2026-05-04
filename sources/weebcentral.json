@@ -2,25 +2,23 @@
   "id": "weebcentral",
   "name": "Weeb Central",
   "lang": "English",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://weebcentral.com",
-  "iconUrl": "https://github.com/rahulpatel1025/manga-extensions/blob/main/icons/weebcentral.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "search": {
     "endpoints": ["/search/data"],
     "queryParam": "text",
     "pageParam": "offset",
-    "mangaRegex": "<a[^>]+href=\"/series/([^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\""
+    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\""
   },
   "details": {
     "paths": ["/series/"],
-    "titleRegex": "<h1[^>]*>([^<]+)</h1>",
+    "titleRegex": "<h1[^>]*>\\s*(.*?)\\s*</h1>",
     "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
-    "descriptionRegex": "<p[^>]+class=\"[^\"]*description[^\"]*\"[^>]*>([^<]+)</p>",
-    "authorRegex": "Author.*?>([^<]+)</a>",
-    "statusRegex": "Status.*?>([^<]+)</a>"
+    "descriptionRegex": "id=\"section-description\"[^>]*>\\s*<p[^>]*>\\s*(.*?)\\s*</p>"
   },
   "chapters": {
-    "listRegex": "<a[^>]+href=\"/chapters/([^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>"
+    "listRegex": "<a[^>]+href=\"(https://weebcentral\\.com/chapters/[^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>"
   },
   "pages": {
     "cdnRegex": "https://[^\\s\"']+\\.(?:png|jpg|jpeg|webp)"
