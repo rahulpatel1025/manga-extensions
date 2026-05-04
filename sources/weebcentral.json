@@ -2,7 +2,7 @@
   "id": "weebcentral",
   "name": "Weeb Central",
   "lang": "English",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "search": {
@@ -12,7 +12,7 @@
     "pageSize": 24,
     "paginationType": "offset",
     "responseType": "html",
-    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"",
+    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[\\s\\S]*?<strong[^>]*>\\s*(.*?)\\s*</strong>",
     "idGroup": 1,
     "titleGroup": 3,
     "coverGroup": 2,
