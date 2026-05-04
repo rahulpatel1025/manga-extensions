@@ -4,7 +4,7 @@
   "lang": "English",
   "version": "1.0.0",
   "baseUrl": "https://weebcentral.com",
-  "iconUrl": "https://raw.githubusercontent.com/RahulPatel/manga-extensions/main/icons/weebcentral.png",
+  "iconUrl": "https://github.com/rahulpatel1025/manga-extensions/blob/main/icons/weebcentral.png?raw=true",
   "search": {
     "endpoints": ["/search/data"],
     "queryParam": "text",
