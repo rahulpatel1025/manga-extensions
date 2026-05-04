@@ -1,0 +1,28 @@
+{
+  "id": "weebcentral",
+  "name": "Weeb Central",
+  "lang": "English",
+  "version": "1.0.0",
+  "baseUrl": "https://weebcentral.com",
+  "iconUrl": "https://raw.githubusercontent.com/RahulPatel/manga-extensions/main/icons/weebcentral.png",
+  "search": {
+    "endpoints": ["/search/data"],
+    "queryParam": "text",
+    "pageParam": "offset",
+    "mangaRegex": "<a[^>]+href=\"/series/([^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\""
+  },
+  "details": {
+    "paths": ["/series/"],
+    "titleRegex": "<h1[^>]*>([^<]+)</h1>",
+    "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
+    "descriptionRegex": "<p[^>]+class=\"[^\"]*description[^\"]*\"[^>]*>([^<]+)</p>",
+    "authorRegex": "Author.*?>([^<]+)</a>",
+    "statusRegex": "Status.*?>([^<]+)</a>"
+  },
+  "chapters": {
+    "listRegex": "<a[^>]+href=\"/chapters/([^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>"
+  },
+  "pages": {
+    "cdnRegex": "https://[^\\s\"']+\\.(?:png|jpg|jpeg|webp)"
+  }
+}
