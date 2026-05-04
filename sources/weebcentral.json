@@ -2,7 +2,7 @@
   "id": "weebcentral",
   "name": "Weeb Central",
   "lang": "English",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "search": {
@@ -12,10 +12,11 @@
     "pageSize": 24,
     "paginationType": "offset",
     "responseType": "html",
-    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"",
+    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"",
     "idGroup": 1,
     "titleGroup": 3,
-    "coverGroup": 2
+    "coverGroup": 2,
+    "requiredParams": "author=&sort=Best%20Match&order=Descending&official=Any&anime=Any&adult=Any&display_mode=Full%20Display"
   },
   "details": {
     "paths": [""],
@@ -24,7 +25,7 @@
     "descriptionRegex": "id=\"section-description\"[^>]*>[\\s\\S]*?<p[^>]*>\\s*(.*?)\\s*</p>"
   },
   "chapters": {
-    "listRegex": "<a[^>]+href=\"(https://weebcentral\\.com/chapters/[^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>",
+    "listRegex": "<a[^>]+href=\"(https://weebcentral\\.com/chapters/[^\"]+)\"[^>]*>[\\s\\S]*?<span[^>]*>([^<]+)</span>",
     "idGroup": 1,
     "nameGroup": 2
   },
