@@ -2,25 +2,33 @@
   "id": "weebcentral",
   "name": "Weeb Central",
   "lang": "English",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "search": {
     "endpoints": ["/search/data"],
     "queryParam": "text",
     "pageParam": "offset",
-    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\""
+    "pageSize": 24,
+    "paginationType": "offset",
+    "responseType": "html",
+    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>\\s*<img[^>]+src=\"([^\"]+)\"[^>]*alt=\"([^\"]+)\"",
+    "idGroup": 1,
+    "titleGroup": 3,
+    "coverGroup": 2
   },
   "details": {
-    "paths": ["/series/"],
+    "paths": [""],
     "titleRegex": "<h1[^>]*>\\s*(.*?)\\s*</h1>",
     "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
-    "descriptionRegex": "id=\"section-description\"[^>]*>\\s*<p[^>]*>\\s*(.*?)\\s*</p>"
+    "descriptionRegex": "id=\"section-description\"[^>]*>[\\s\\S]*?<p[^>]*>\\s*(.*?)\\s*</p>"
   },
   "chapters": {
-    "listRegex": "<a[^>]+href=\"(https://weebcentral\\.com/chapters/[^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>"
+    "listRegex": "<a[^>]+href=\"(https://weebcentral\\.com/chapters/[^\"]+)\"[^>]*>\\s*<span[^>]*>([^<]+)</span>",
+    "idGroup": 1,
+    "nameGroup": 2
   },
   "pages": {
-    "cdnRegex": "https://[^\\s\"']+\\.(?:png|jpg|jpeg|webp)"
+    "cdnRegex": "https://[^\\s\"'<>]+\\.(?:png|jpg|jpeg|webp)(?:\\?[^\\s\"'<>]*)?"
   }
 }
