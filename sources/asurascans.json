@@ -5,7 +5,7 @@
   "isNsfw": false,
   "version": "1.0.0",
   "baseUrl": "https://asurascans.com",
-  "iconUrl": "https://asurascans.com/images/logo.webp",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=asurascans.com&sz=256",
   "filters": [
     {
       "id": "sort",
