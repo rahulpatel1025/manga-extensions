@@ -14,7 +14,7 @@
     "responseType": "html",
    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[^>]*>[\\s\\S]*?<strong[^>]*>([^<]+)</strong>",
    "idGroup": 1,
-   "titleGroup": 3,
+   "titleGroup": 0,
    "coverGroup": 2,
     "requiredParams": "author=&sort=Best%20Match&order=Descending&official=Any&anime=Any&adult=Any&display_mode=Full%20Display"
   },
