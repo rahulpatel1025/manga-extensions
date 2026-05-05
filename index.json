@@ -2,8 +2,9 @@
   {
     "id": "weebcentral",
     "name": "Weeb Central",
-    "lang": "English",
-    "version": "1.0.1",
+    "lang": "en",
+    "isNsfw": false,
+    "version": "1.0.6",
     "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png"
   }
 ]
