@@ -3,7 +3,7 @@
   "name": "Weeb Central",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.6",
+  "version": "1.0.8",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "filters": [
@@ -13,7 +13,7 @@
       "type": "select",
       "options": [
         { "label": "Best Match", "value": "Best Match" },
-        { "label": "Alphabetical", "value": "Alphabetical" },
+        { "label": "Alphabetical", "value": "Alphabet" },
         { "label": "Popularity", "value": "Popularity" },
         { "label": "Updates", "value": "Updates" },
         { "label": "Released", "value": "Released" },
@@ -30,13 +30,45 @@
       ]
     },
     {
+      "id": "status",
+      "name": "Series Status",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "Any" },
+        { "label": "Ongoing", "value": "Ongoing" },
+        { "label": "Completed", "value": "Completed" },
+        { "label": "Hiatus", "value": "Hiatus" },
+        { "label": "Canceled", "value": "Canceled" }
+      ]
+    },
+    {
       "id": "official",
       "name": "Official Translation",
       "type": "select",
       "options": [
         { "label": "Any", "value": "Any" },
-        { "label": "Yes", "value": "Yes" },
-        { "label": "No", "value": "No" }
+        { "label": "Yes", "value": "True" },
+        { "label": "No", "value": "False" }
+      ]
+    },
+    {
+      "id": "anime",
+      "name": "Anime Adaptation",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "Any" },
+        { "label": "Yes", "value": "True" },
+        { "label": "No", "value": "False" }
+      ]
+    },
+    {
+      "id": "adult",
+      "name": "Adult Content",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "Any" },
+        { "label": "Yes", "value": "True" },
+        { "label": "No", "value": "False" }
       ]
     }
   ],
