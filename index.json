@@ -6,5 +6,13 @@
     "isNsfw": false,
     "version": "1.0.6",
     "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png"
+  },
+  {
+    "id": "asurascans",
+    "name": "Asura Scans",
+    "lang": "en",
+    "isNsfw": false,
+    "version": "1.0.0",
+    "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/asurascans.png"
   }
 ]
