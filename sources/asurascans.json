@@ -1,0 +1,94 @@
+{
+  "id": "asurascans",
+  "name": "Asura Scans",
+  "lang": "en",
+  "isNsfw": false,
+  "version": "1.0.0",
+  "baseUrl": "https://asurascans.com",
+  "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/asurascans.png",
+  "filters": [
+    {
+      "id": "sort",
+      "name": "Sort By",
+      "type": "select",
+      "options": [
+        { "label": "Latest Update", "value": "latest" },
+        { "label": "Alphabetical", "value": "title" },
+        { "label": "Rating", "value": "rating" },
+        { "label": "Trending", "value": "trending" }
+      ]
+    },
+    {
+      "id": "order",
+      "name": "Order",
+      "type": "select",
+      "options": [
+        { "label": "Descending", "value": "desc" },
+        { "label": "Ascending", "value": "asc" }
+      ]
+    },
+    {
+      "id": "status",
+      "name": "Series Status",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "" },
+        { "label": "Ongoing", "value": "ongoing" },
+        { "label": "Completed", "value": "completed" },
+        { "label": "Hiatus", "value": "hiatus" },
+        { "label": "Dropped", "value": "dropped" }
+      ]
+    },
+    {
+      "id": "genres",
+      "name": "Genres",
+      "type": "tick",
+      "supportsExclude": false,
+      "options": [
+        { "label": "Action", "value": "action" },
+        { "label": "Adventure", "value": "adventure" },
+        { "label": "Comedy", "value": "comedy" },
+        { "label": "Drama", "value": "drama" },
+        { "label": "Fantasy", "value": "fantasy" },
+        { "label": "Isekai", "value": "isekai" },
+        { "label": "Magic", "value": "magic" },
+        { "label": "Martial Arts", "value": "martial-arts" },
+        { "label": "Murim", "value": "murim" },
+        { "label": "Mystery", "value": "mystery" },
+        { "label": "Reincarnation", "value": "reincarnation" },
+        { "label": "Romance", "value": "romance" },
+        { "label": "Sci-Fi", "value": "sci-fi" },
+        { "label": "Seinen", "value": "seinen" },
+        { "label": "Shounen", "value": "shounen" },
+        { "label": "Slice of Life", "value": "slice-of-life" },
+        { "label": "System", "value": "system" }
+      ]
+    }
+  ],
+  "search": {
+    "endpoints": ["/browse"],
+    "queryParam": "name",
+    "pageParam": "page",
+    "pageSize": 20,
+    "paginationType": "page",
+    "responseType": "html",
+    "mangaRegex": "href=\"([^\"]*(?:/series/|/comics/)[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"",
+    "idGroup": 1,
+    "coverGroup": 2,
+    "requiredParams": "sort=latest&order=desc"
+  },
+  "details": {
+    "paths": [""],
+    "titleRegex": "property=\"og:title\"\\s+content=\"([^\"]+)\"",
+    "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
+    "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\""
+  },
+  "chapters": {
+    "listRegex": "href=\"([^\"]*/(?:chapter|ch)[^\"]+)\"[^>]*>[\\s\\S]*?<h3[^>]*>\\s*(.*?)\\s*</h3>",
+    "idGroup": 1,
+    "nameGroup": 2
+  },
+  "pages": {
+    "cdnRegex": "(asurascans\\.com|asuracomic\\.net|ggpht\\.com|asura).*?\\.(png|jpg|jpeg|webp)"
+  }
+}
