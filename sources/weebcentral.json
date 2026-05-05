@@ -1,10 +1,45 @@
 {
   "id": "weebcentral",
   "name": "Weeb Central",
-  "lang": "English",
-  "version": "1.0.5",
+  "lang": "en",
+  "isNsfw": false,
+  "version": "1.0.6",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
+  "filters": [
+    {
+      "id": "sort",
+      "name": "Sort By",
+      "type": "select",
+      "options": [
+        { "label": "Best Match", "value": "Best Match" },
+        { "label": "Alphabetical", "value": "Alphabetical" },
+        { "label": "Popularity", "value": "Popularity" },
+        { "label": "Updates", "value": "Updates" },
+        { "label": "Released", "value": "Released" },
+        { "label": "Added", "value": "Added" }
+      ]
+    },
+    {
+      "id": "order",
+      "name": "Order",
+      "type": "select",
+      "options": [
+        { "label": "Descending", "value": "Descending" },
+        { "label": "Ascending", "value": "Ascending" }
+      ]
+    },
+    {
+      "id": "official",
+      "name": "Official Translation",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "Any" },
+        { "label": "Yes", "value": "Yes" },
+        { "label": "No", "value": "No" }
+      ]
+    }
+  ],
   "search": {
     "endpoints": ["/search/data"],
     "queryParam": "text",
@@ -12,9 +47,9 @@
     "pageSize": 24,
     "paginationType": "offset",
     "responseType": "html",
-   "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[^>]*>[\\s\\S]*?<strong[^>]*>([^<]+)</strong>",
-   "idGroup": 1,
-   "coverGroup": 2,
+    "mangaRegex": "<a[^>]+href=\"(https://weebcentral\\.com/series/[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"[^>]*>[\\s\\S]*?<strong[^>]*>([^<]+)</strong>",
+    "idGroup": 1,
+    "coverGroup": 2,
     "requiredParams": "author=&sort=Best%20Match&order=Descending&official=Any&anime=Any&adult=Any&display_mode=Full%20Display"
   },
   "details": {
