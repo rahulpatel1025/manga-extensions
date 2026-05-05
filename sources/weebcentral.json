@@ -3,7 +3,7 @@
   "name": "Weeb Central",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.9",
+  "version": "1.1.0",
   "baseUrl": "https://weebcentral.com",
   "iconUrl": "https://raw.githubusercontent.com/rahulpatel1025/manga-extensions/main/icons/weebcentral.png",
   "filters": [
@@ -13,11 +13,11 @@
       "type": "select",
       "options": [
         { "label": "Best Match", "value": "Best Match" },
-        { "label": "Alphabetical", "value": "Alphabet" },
+        { "label": "Alphabet", "value": "Alphabet" },
         { "label": "Popularity", "value": "Popularity" },
-        { "label": "Updates", "value": "Updates" },
-        { "label": "Released", "value": "Released" },
-        { "label": "Added", "value": "Added" }
+        { "label": "Subscribers", "value": "Subscribers" },
+        { "label": "Recently Added", "value": "Recently Added" },
+        { "label": "Latest Updates", "value": "Latest Updates" }
       ]
     },
     {
