@@ -3,7 +3,7 @@
   "name": "Asura Scans",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://asurascans.com",
   "iconUrl": "https://www.google.com/s2/favicons?domain=asurascans.com&sz=256",
   "filters": [
@@ -84,7 +84,7 @@
     "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\""
   },
   "chapters": {
-    "listRegex": "href=\"(/comics/[^\"]+/chapter/[^\"]+|/series/[^\"]+/chapter/[^\"]+)\"(?:(?!</a>)[\\s\\S])*?(Chapter\\s*[\\d\\.]+|Prologue|Epilogue)",
+    "listRegex": "href=\"(/(?:comics|series)/[^\"]+/chapter/([^/\"?#]+))\"",
     "idGroup": 1,
     "nameGroup": 2
   },
