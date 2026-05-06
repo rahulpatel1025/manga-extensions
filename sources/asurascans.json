@@ -3,7 +3,7 @@
   "name": "Asura Scans",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://asurascans.com",
   "iconUrl": "https://www.google.com/s2/favicons?domain=asurascans.com&sz=256",
   "filters": [
@@ -72,7 +72,7 @@
     "pageSize": 20,
     "paginationType": "page",
     "responseType": "html",
-    "mangaRegex": "href=\"([^\"]*(?:/series/|/comics/)[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"",
+    "mangaRegex": "href=\"(/comics/[^\"]+|/series/[^\"]+)\"[^>]*>[\\s\\S]*?src=\"([^\"]+)\"",
     "idGroup": 1,
     "coverGroup": 2,
     "requiredParams": "sort=latest&order=desc"
