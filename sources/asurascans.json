@@ -3,7 +3,7 @@
   "name": "Asura Scans",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://asurascans.com",
   "iconUrl": "https://www.google.com/s2/favicons?domain=asurascans.com&sz=256",
   "filters": [
@@ -72,7 +72,7 @@
     "pageSize": 20,
     "paginationType": "page",
     "responseType": "html",
-    "mangaRegex": "href=\"([^\"]*(?:/series/|/comics/)[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"",
+    "mangaRegex": "href=\"(https://asurascans\\.com(?:/series/|/comics/)[^\"]+)\"[^>]*>[\\s\\S]*?<img[^>]+src=\"([^\"]+)\"",
     "idGroup": 1,
     "coverGroup": 2,
     "requiredParams": "sort=latest&order=desc"
@@ -84,7 +84,7 @@
     "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\""
   },
   "chapters": {
-    "listRegex": "href=\"([^\"]*/(?:chapter|ch)[^\"]+)\"[^>]*>[\\s\\S]*?<h3[^>]*>\\s*(.*?)\\s*</h3>",
+    "listRegex": "href=\"([^\"]*(?:/chapter|/ch)[^\"]+)\"[^>]*>(?:(?:(?!</a).)*?)<h3[^>]*>\\s*(.*?)\\s*</h3>",
     "idGroup": 1,
     "nameGroup": 2
   },
