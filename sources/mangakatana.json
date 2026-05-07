@@ -1,0 +1,47 @@
+{
+  "id": "mangakatana",
+  "name": "MangaKatana",
+  "lang": "en",
+  "isNsfw": false,
+  "version": "1.0.0",
+  "baseUrl": "https://mangakatana.com",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=mangakatana.com&sz=256",
+  "filters": [
+    {
+      "id": "status",
+      "name": "Status",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "" },
+        { "label": "Ongoing", "value": "1" },
+        { "label": "Completed", "value": "2" }
+      ]
+    }
+  ],
+  "search": {
+    "endpoints": ["/manga"],
+    "queryParam": "search",
+    "pageParam": "page",
+    "pageSize": 15,
+    "paginationType": "page",
+    "responseType": "html",
+    "mangaRegex": "href=\"(https://mangakatana\\.com/manga/[^\"]+)\"(?:(?!</a>)[\\s\\S])*?src=\"([^\"]+)\"",
+    "idGroup": 1,
+    "coverGroup": 2,
+    "requiredParams": ""
+  },
+  "details": {
+    "paths": [""],
+    "titleRegex": "property=\"og:title\"\\s+content=\"([^\"]+)\"",
+    "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
+    "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\""
+  },
+  "chapters": {
+    "listRegex": "href=\"(https://mangakatana\\.com/manga/[^\"]+/(c[\\d\\.]+))\"",
+    "idGroup": 1,
+    "nameGroup": 2
+  },
+  "pages": {
+    "cdnRegex": "https?://[^\"]*?(?:mkcdn|mangakatana|blogspot|googleusercontent)[^\"]*?\\.(?:png|jpg|jpeg|webp)"
+  }
+}
