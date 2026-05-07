@@ -12,7 +12,15 @@
     "name": "Asura Scans",
     "lang": "en",
     "isNsfw": false,
-    "version": "1.0.0",
+    "version": "1.0.6",
     "iconUrl": "https://asurascans.com/images/logo.webp"
+  },
+  {
+    "id": "mangakatana",
+    "name": "MangaKatana",
+    "lang": "en",
+    "isNsfw": false,
+    "version": "1.0.0",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=mangakatana.com&sz=256"
   }
 ]
