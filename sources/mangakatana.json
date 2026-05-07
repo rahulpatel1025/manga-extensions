@@ -3,10 +3,32 @@
   "name": "MangaKatana",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://mangakatana.com",
   "iconUrl": "https://www.google.com/s2/favicons?domain=mangakatana.com&sz=256",
-  "filters": [],
+  "filters": [
+    {
+      "id": "sort",
+      "name": "Sort By",
+      "type": "select",
+      "options": [
+        { "label": "Latest Updates", "value": "latest" },
+        { "label": "New Manga", "value": "new" },
+        { "label": "A-Z", "value": "az" },
+        { "label": "Most Views", "value": "views" }
+      ]
+    },
+    {
+      "id": "status",
+      "name": "Series Status",
+      "type": "select",
+      "options": [
+        { "label": "Any", "value": "" },
+        { "label": "Ongoing", "value": "1" },
+        { "label": "Completed", "value": "2" }
+      ]
+    }
+  ],
   "search": {
     "endpoints": ["/", "/manga"],
     "queryParam": "search",
