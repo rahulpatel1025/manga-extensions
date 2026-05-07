@@ -3,7 +3,7 @@
   "name": "MangaKatana",
   "lang": "en",
   "isNsfw": false,
-  "version": "1.0.1",
+  "version": "1.0.3",
   "baseUrl": "https://mangakatana.com",
   "iconUrl": "https://www.google.com/s2/favicons?domain=mangakatana.com&sz=256",
   "filters": [
@@ -103,9 +103,12 @@
   },
   "details": {
     "paths": [""],
-    "titleRegex": "property=\"og:title\"\\s+content=\"([^\"]+)\"",
+    "titleRegex": "<h1 class=\"heading\"[^>]*>([^<]+)</h1>",
     "coverRegex": "property=\"og:image\"\\s+content=\"([^\"]+)\"",
-    "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\""
+    "descriptionRegex": "property=\"og:description\"\\s+content=\"([^\"]+)\"",
+    "authorRegex": "<div class=\"author\">[\\s\\S]*?<a[^>]*>([^<]+)</a>",
+    "statusRegex": "<div class=\"status\">[\\s\\S]*?<div class=\"value\">([^<]+)</div>",
+    "genresRegex": "href=\"https://mangakatana\\.com/genre/[^\"]+\">([^<]+)</a>"
   },
   "chapters": {
     "listRegex": "href=\"(https://mangakatana\\.com/manga/[^\"]+/(c[\\d\\.]+))\"",
